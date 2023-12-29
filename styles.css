@@ -1,0 +1,498 @@
+:root {
+    --primary-color: rgb(154, 182, 252);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+
+
+
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+
+}
+
+.contenedorDeTitulo {
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    transform: translate(-60%, -60%);
+    color: white;
+    font-family: 'Gill Sans', 'gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* BARRA DE NAVEGACIÓN */
+.contenidoNavegacion {
+    max-width: 1250px;
+    margin: auto;
+    padding-inline-start: 0px 100px;
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.barraNavegacion {
+    background-image: url(../recursos/fondoNav.jpg);
+    background-position: top;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    padding: 15px 0 10px 10px;
+    border-radius: 0px 0px 10px 10px;
+
+}
+
+.barraNavegacion .contenidoNavegacion {
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+}
+
+.barraNavegacion .menu {
+    display: inline-flex;
+}
+
+.barraNavegacion .logo a {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    padding: 15px 0 0 10px;
+}
+
+.logo {
+    display: flex;
+    width: 100%;
+}
+
+#logoViaje {
+    width: 50px;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 550;
+    text-decoration: none;
+    margin-left: 25px;
+    padding: 0 20px 0 0;
+    ;
+}
+
+
+
+
+/* CONTENEDOR DE BANER CON TITULO */
+.presentacionBaner {
+    height: 100vh;
+    background: url(../recursos/1embarcaderoPuenteLuces.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-right: 20px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.contenedorDeTitulo {
+    position: absolute;
+    float: right;
+    font-size: 25px;
+    color: white;
+}
+
+
+/* SECCIÓN PRESENTACIÓN*/
+
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+
+.presentacion-contenedor {
+    font-family: 'Gill Sans', 'gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 625px;
+    height: 605PX;
+    margin: 3rem 4rem 2rem 0;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: justify;
+}
+
+.presentacion-titulo {
+    padding: 1rem;
+    font-size: 40px;
+}
+
+
+#presentacionImagen {
+    border-radius: 20px;
+    width: 500px;
+    height: 600PX;
+}
+
+
+/* SECCIÓN DE CARACTERÍSTICAS*/
+
+
+
+.caracteristicas {
+    text-align: center;
+    margin: 1rem;
+}
+
+.caracteristicas h2 {
+    font-size: 2.5rem;
+    padding: 2rem;
+    color: rgb(7, 7, 53);
+}
+
+.caracteristicas-circulos {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.caracteristicas-imagen {
+    border-radius: 50%;
+    width: 288px;
+    height: 288px;
+}
+
+.caracteristica-boton {
+    background-color: var(--primary-color);
+    width: 283px;
+    height: 42px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.rem;
+    cursor: pointer;
+}
+
+/*  ESTILOS DE LA VENTANA PARA ABRIR ELEMENTOS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.ventana {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    /*Para que no se vea mi midal*/
+    pointer-events: none;
+    /*Para que se pueda clickear en la pantalla de la pagina*/
+    transition: opacity .7s;
+    /*Transicion para que no cierre tan rapido la pestaña*/
+}
+
+.ventana2 {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    /*Para que no se vea mi midal*/
+    pointer-events: none;
+    /*Para que se pueda clickear en la pantalla de la pagina*/
+    transition: opacity .7s;
+    /*Transicion para que no cierre tan rapido la pestaña*/
+}
+
+.ventana3,
+.ventana4 {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    /*Para que no se vea mi midal*/
+    pointer-events: none;
+    /*Para que se pueda clickear en la pantalla de la pagina*/
+    transition: opacity .7s;
+    /*Transicion para que no cierre tan rapido la pestaña*/
+}
+
+.ventana--mostrar {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .7s;
+    /*Transicion para que la pestaña abra despacio*/
+}
+
+/* modalContainer */
+.ventanaContenedor {
+    width: 90%;
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+}
+
+/* .modalTexto */
+.ventanaTexto {
+    font-size: 2.5em;
+}
+
+/* .modalParrafo */
+.ventanaParrafo {
+    margin-bottom: 10px;
+}
+
+/* modalImGEN */
+.ventanaImagen {
+    width: 90%;
+    max-width: 300px;
+}
+
+.ventanaCerrar {
+    text-decoration: none;
+    color: black;
+    background-color: var(--primary-color);
+    padding: 1em 3em;
+    border: 2px solid white;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+
+.ventanaCerrar:hover {
+    color: var(--primary-color);
+    background-color: white;
+}
+
+/*  ESTILOS DE LA VENTANA PARA ABRIR ELEMENTOS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* SECCIÓN DE PROMOCIONES*/
+
+.promociones {
+    display: flex;
+    background-image: url(../recursos/fondoNubes.jpg);
+    background-size: cover;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+.promociones-contenedor {
+    margin: 1rem 1rem 1rem 3rem;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: justify;
+    font-family: 'Gill Sans', 'gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.promociones-titulo {
+    text-align: center;
+    padding: .5rem;
+}
+
+
+#inputFormPromociones {
+    border-color: white;
+    width: 350px;
+    height: 33px;
+    cursor: auto;
+}
+
+#botonFormPromociones {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    width: 150px;
+    height: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+#imagenAvion {
+    border-radius: 20px;
+    width: 625px;
+    height: 425PX;
+}
+
+
+/*SECCION SOBRE NOSOTROS*/
+.sobreNosotros {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    /* Añadido para centrar horizontalmente */
+}
+
+.sobreNosotrosTexto {
+    margin: 2rem;
+    font-size: 23px;
+    font-family: 'Gill Sans', 'gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sobreNosotros h1 {
+    margin: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#seccionOculta {
+    width: 50%;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+form {
+    border: 1px solid #a1caf7;
+    background-image: url(../recursos/fondoNubes.jpg);
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+/*BOTON SECCION OCULTA*/
+
+.reservar-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reservar-button:hover {
+    background-color: #0056b3;
+}
+
+
+/*FOOTER*/
+
+
+footer {
+    margin-top: 3rem;
+    padding: 20px;
+    width: 100%;
+    background-image: url(../recursos/fondoFooter.jpg);
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen */
+    color: white;
+    /* Color del texto en el pie de página */
+    text-align: center;
+    /*  */
+    font-family: 'Arial', sans-serif;
+    /* Tipo de fuente */
+    font-size: 25px;
+    /* Tamaño de la fuente */
+    font-style: Arial;
+    /* Estilo de la fuente */
+    font-weight: bold;
+    /* Peso de la fuente */
+}
+
+footer p {
+    text-decoration: underline;
+    margin: 10px;
+}
+
+.icon-container {
+    padding: 1rem;
+}
+
+.icon-container i {
+    font-size: 30px;
+    /* Tamaño de los iconos */
+    color: white;
+    cursor: pointer;
+}
